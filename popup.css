@@ -1,0 +1,132 @@
+/* 定义颜色变量 */
+:root {
+    --background-color: #ffffff;
+    --footer-background-color: #f5f5f5;
+    --text-color: #333333;
+    --primary-color: #0077e6;
+    --button-text-color: #ffffff;
+    --button-hover-color: #005bb5;
+    --button-active-color: #004a93;
+    --border-color: #e0e0e0;
+    --secondary-text-color: #555555;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+  }
+  
+  /* 暗色模式 */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background-color: #1e1e1e;
+      --footer-background-color: #2a2a2a;
+      --text-color: #eaeaea;
+      --primary-color: #5c99f2;
+      --button-text-color: #ffffff;
+      --button-hover-color: #4a86d0;
+      --button-active-color: #3b6ea0;
+      --border-color: #333333;
+      --secondary-text-color: #cccccc;
+      --shadow-color: rgba(0, 0, 0, 0.5);
+    }
+  }
+  
+  body {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+    width: 320px;
+    box-sizing: border-box;
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 300px;
+  }
+  
+  header, main, footer {
+    padding: 20px;
+  }
+  
+  header {
+    background-color: var(--footer-background-color);
+  }
+  
+  h1 {
+    font-size: 20px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .version {
+    font-size: 14px;
+    font-weight: 100;
+    color: var(--primary-color);
+    margin-left: 10px;
+  }
+  
+  main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  #download-btn {
+    background-color: var(--primary-color);
+    color: var(--button-text-color);
+    font-size: 16px;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    width: 100%;
+    box-shadow: 0px 4px 6px var(--shadow-color);
+    margin-bottom: 15px;
+  }
+  
+  #download-btn:hover {
+    background-color: var(--button-hover-color);
+  }
+  
+  #download-btn:active {
+    background-color: var(--button-active-color);
+    transform: scale(0.98);
+  }
+  
+  .description {
+    font-size: 14px;
+    color: var(--secondary-text-color);
+    text-align: left;
+    margin: 0;
+  }
+  
+  footer {
+    background-color: var(--footer-background-color);
+    text-align: center;
+    padding: 15px 20px;
+    border-top: 1px solid var(--border-color);
+  }
+  
+  .footer-text {
+    font-size: 12px;
+    color: var(--secondary-text-color);
+    margin: 0;
+    line-height: 1.5;
+  }
+  
+  .footer-text a {
+    color: var(--primary-color); /* 链接颜色与主按钮颜色保持一致 */
+    text-decoration: none; /* 移除下划线 */
+    font-weight: 600; /* 让链接稍微突出 */
+    transition: color 0.3s ease; /* 添加平滑的过渡效果 */
+  }
+  
+  .footer-text a:hover {
+    color: var(--button-hover-color); /* 当用户悬停时改变颜色 */
+  }
+  
+  .footer-text a:active {
+    color: var(--button-active-color); /* 当链接被点击时的颜色变化 */
+  }
